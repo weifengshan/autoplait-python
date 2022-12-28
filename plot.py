@@ -59,9 +59,9 @@ def sub_fig(ax, X, regime_list):
 
     for regime_id, regime in enumerate(regime_list):
         for seg_idx in range(regime.n_seg):
-            segment = regime.subs[seg_idx]
-            st = regime.subs[seg_idx][0]
-            ed = sum(regime.subs[seg_idx])
+            segment = regime.seg_list[seg_idx]
+            st = regime.seg_list[seg_idx][0]
+            ed = sum(regime.seg_list[seg_idx])
 
             r = patches.Rectangle(
                 xy=(int(st), ax.get_ylim()[0]),
